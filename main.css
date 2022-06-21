@@ -1,0 +1,125 @@
+/* Global Defaults */
+html {
+    min-width: 880px;
+    color: #f9f9f9;
+    font-family: "Source Code Pro", monospace;
+}
+
+/* Body Layout */
+body {
+    background: url("img/StarSky.png"), linear-gradient(#0a0f24, #111e3b);
+    margin: 0 10% 0 10%;
+    display: grid;
+    grid-template-areas: "head head nav"
+                         "main main main"
+                         "about about about"
+                         "foot foot foot";
+    grid-template-rows: auto 1fr auto 70px;
+    animation: backgroundScroll 80s linear infinite;
+}
+@keyframes backgroundScroll {
+    from {background-position: 0 0;}
+    to   {background-position: -1920px 0;}
+}
+
+/* Page Layout */
+body > header {
+    /* background-color: #8ca0ff; */
+    grid-area: head;
+    padding: 20pt;
+}
+body > nav {
+    /* background-color: #ffa08c; */
+    grid-area: nav;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+body > main {
+    grid-area: main;
+    display: grid;
+    grid-template-areas: "pf buttons";
+    align-items: center;
+    column-gap: 40pt;
+    padding: 40px;
+}
+body > #about {
+    background-color: #0e305a;
+    grid-area: about;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    line-height: 18pt;
+}
+body > main > #50bvd {
+    /* background-color: red; */
+    grid-area: 50bvd;
+    justify-self: end;
+    padding: 5pt 0 5pt 0;
+}
+body > main > #buttons {
+    /* background-color: blue; */
+    grid-area: buttons;
+    justify-self: start;
+}
+body > footer {
+    background-color: #2b496f;
+    grid-area: foot;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #8c9dbb; 
+    font-size: 11pt;
+}
+
+/* Buttons */
+button {
+    color: #0f1934;
+    background-color: #f9f9f9;
+    font: bold 16px "Source Code Pro", monospace;
+    text-align: center;
+    text-transform: uppercase;
+    border: none;
+    border-radius: 4px;
+    padding: 9px 19px;
+    border: 1px solid #f9f9f9;
+    transition: 0.15s;
+}
+button:hover {
+    color: #f9f9f9;
+    background-color: #0f1934;
+}
+
+a {
+    color: #b9d3e8;
+    font-weight: bold;
+    text-decoration: none;
+}
+a:hover {
+    color: white;
+}
+a:active {
+    color: #cecece;
+}
+
+/* Image Scaling */
+#logo {
+    height: 30pt;
+}
+
+#uranaibaba {
+    height: 400pt;
+    animation: uranaibaba 6s ease-in-out infinite;
+}
+@keyframes uranaibaba {
+    from {transform: translate(0, -4px);}
+    50%  {transform: translate(0, 4px);}
+    to   {transform: translate(0, -4px);}
+}
+
+/* Mobile and Small Screens */
+@media (max-width: 1024pt) {
+  body {
+    margin: 0;
+  }
+}

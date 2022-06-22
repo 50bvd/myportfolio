@@ -2,12 +2,12 @@
 html {
     min-width: 880px;
     color: #f9f9f9;
-    font-family: "Source Code Pro", monospace;
+    font-family: 'Oswald', sans-serif;
 }
 
 /* Body Layout */
 body {
-    background: url("img/StarSky.png"), linear-gradient(#0a0f24, #111e3b);
+    background: url("img/StarSky.png"), linear-gradient(#4C0042, #001D70);
     margin: 0 10% 0 10%;
     display: grid;
     grid-template-areas: "head head nav"
@@ -24,16 +24,17 @@ body {
 
 /* Page Layout */
 body > header {
-    /* background-color: #8ca0ff; */
+    /* background-color: #4C0042; */
     grid-area: head;
     padding: 20pt;
 }
 body > nav {
-    /* background-color: #ffa08c; */
+    /* background-color: #001D70; */
     grid-area: nav;
     display: flex;
     justify-content: space-evenly;
     align-items: center;
+    font-size: 20px;
 }
 body > main {
     grid-area: main;
@@ -50,12 +51,7 @@ body > #about {
     flex-direction: column;
     align-items: center;
     line-height: 18pt;
-}
-body > main > #50bvd {
-    /* background-color: red; */
-    grid-area: 50bvd;
-    justify-self: end;
-    padding: 5pt 0 5pt 0;
+    font-size: 15px;
 }
 body > main > #buttons {
     /* background-color: blue; */
@@ -68,15 +64,15 @@ body > footer {
     display: flex;
     justify-content: center;
     align-items: center;
-    color: #8c9dbb; 
-    font-size: 11pt;
+    color: #8c9dbb;
+    font-size: 12pt;
 }
 
 /* Buttons */
 button {
     color: #0f1934;
     background-color: #f9f9f9;
-    font: bold 16px "Source Code Pro", monospace;
+    font: bold 25px "Oswald", monospace;
     text-align: center;
     text-transform: uppercase;
     border: none;
@@ -104,17 +100,17 @@ a:active {
 
 /* Image Scaling */
 #logo {
-    height: 30pt;
+    height: 60pt;
 }
 
-#uranaibaba {
-    height: 400pt;
-    animation: uranaibaba 6s ease-in-out infinite;
+#baba {
+    height: 550pt;
+    animation: baba 6s ease-in-out infinite;
 }
-@keyframes uranaibaba {
-    from {transform: translate(0, -4px);}
-    50%  {transform: translate(0, 4px);}
-    to   {transform: translate(0, -4px);}
+@keyframes baba {
+    from {transform: translate(0, -10px);}
+    50%  {transform: translate(0, 10px);}
+    to   {transform: translate(0, -10px);}
 }
 
 /* Mobile and Small Screens */

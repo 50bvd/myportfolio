@@ -42,7 +42,7 @@ body > main {
     grid-template-areas: "pf buttons";
     align-items: center;
     column-gap: 40pt;
-    padding: 40px;
+    padding: 62px;
 }
 body > #about {
     background-color: #0e305a;
